@@ -1,0 +1,79 @@
+[debug] [2024-12-04T00:27:42.045Z] ----------------------------------------------------------------------
+[debug] [2024-12-04T00:27:42.048Z] Command:       /Users/lukaskoenig/.nvm/versions/node/v23.3.0/bin/node /Users/lukaskoenig/.nvm/versions/node/v23.3.0/bin/firebase init
+[debug] [2024-12-04T00:27:42.048Z] CLI Version:   13.27.0
+[debug] [2024-12-04T00:27:42.048Z] Platform:      darwin
+[debug] [2024-12-04T00:27:42.049Z] Node Version:  v23.3.0
+[debug] [2024-12-04T00:27:42.049Z] Time:          Tue Dec 03 2024 19:27:42 GMT-0500 (Eastern Standard Time)
+[debug] [2024-12-04T00:27:42.049Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-04T00:27:42.108Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-04T00:27:42.108Z] > authorizing via signed-in user (lkoenig2121@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/lukaskoenig/react-firebase-chatting
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-12-04T00:28:03.131Z] Using project from CLI flag: fireship-demos
+[debug] [2024-12-04T00:28:03.132Z] Checked if tokens are valid: true, expires at: 1733275606456
+[debug] [2024-12-04T00:28:03.132Z] Checked if tokens are valid: true, expires at: 1733275606456
+[debug] [2024-12-04T00:28:03.133Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fireship-demos [none]
+[debug] [2024-12-04T00:28:03.707Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fireship-demos 403
+[debug] [2024-12-04T00:28:03.707Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fireship-demos {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-12-04T00:28:03.708Z] Request to https://firebase.googleapis.com/v1beta1/projects/fireship-demos had HTTP Error: 403, The caller does not have permission
+[debug] [2024-12-04T00:28:03.871Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/fireship-demos had HTTP Error: 403, The caller does not have permission
+    at responseToError (/Users/lukaskoenig/.nvm/versions/node/v23.3.0/lib/node_modules/firebase-tools/lib/responseToError.js:52:12)
+    at RetryOperation._fn (/Users/lukaskoenig/.nvm/versions/node/v23.3.0/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to get Firebase project fireship-demos. Please make sure the project exists and your account has permission to access it.
+[debug] [2024-12-04T00:28:18.470Z] ----------------------------------------------------------------------
+[debug] [2024-12-04T00:28:18.473Z] Command:       /Users/lukaskoenig/.nvm/versions/node/v23.3.0/bin/node /Users/lukaskoenig/.nvm/versions/node/v23.3.0/bin/firebase deploy
+[debug] [2024-12-04T00:28:18.473Z] CLI Version:   13.27.0
+[debug] [2024-12-04T00:28:18.474Z] Platform:      darwin
+[debug] [2024-12-04T00:28:18.474Z] Node Version:  v23.3.0
+[debug] [2024-12-04T00:28:18.474Z] Time:          Tue Dec 03 2024 19:28:18 GMT-0500 (Eastern Standard Time)
+[debug] [2024-12-04T00:28:18.474Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-04T00:28:18.531Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-04T00:28:18.531Z] > authorizing via signed-in user (lkoenig2121@gmail.com)
+[debug] [2024-12-04T00:28:18.532Z] [iam] checking project fireship-demos for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-12-04T00:28:18.533Z] Checked if tokens are valid: true, expires at: 1733275606456
+[debug] [2024-12-04T00:28:18.533Z] Checked if tokens are valid: true, expires at: 1733275606456
+[debug] [2024-12-04T00:28:18.533Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fireship-demos:testIamPermissions [none]
+[debug] [2024-12-04T00:28:18.534Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fireship-demos:testIamPermissions x-goog-quota-user=projects/fireship-demos
+[debug] [2024-12-04T00:28:18.534Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fireship-demos:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-12-04T00:28:19.001Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fireship-demos:testIamPermissions 200
+[debug] [2024-12-04T00:28:19.001Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fireship-demos:testIamPermissions {}
+[debug] [2024-12-04T00:28:19.001Z] [iam] error while checking permissions, command may fail: Authorization failed. This account is missing the following required permissions on project fireship-demos:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2024-12-04T00:28:19.002Z] Checked if tokens are valid: true, expires at: 1733275606456
+[debug] [2024-12-04T00:28:19.002Z] Checked if tokens are valid: true, expires at: 1733275606456
+[debug] [2024-12-04T00:28:19.002Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fireship-demos [none]
+[debug] [2024-12-04T00:28:19.430Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fireship-demos 403
+[debug] [2024-12-04T00:28:19.430Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fireship-demos {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-12-04T00:28:19.430Z] Request to https://firebase.googleapis.com/v1beta1/projects/fireship-demos had HTTP Error: 403, The caller does not have permission
+[debug] [2024-12-04T00:28:19.623Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/fireship-demos had HTTP Error: 403, The caller does not have permission
+    at responseToError (/Users/lukaskoenig/.nvm/versions/node/v23.3.0/lib/node_modules/firebase-tools/lib/responseToError.js:52:12)
+    at RetryOperation._fn (/Users/lukaskoenig/.nvm/versions/node/v23.3.0/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to get Firebase project fireship-demos. Please make sure the project exists and your account has permission to access it.
